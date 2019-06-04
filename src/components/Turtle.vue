@@ -8,15 +8,11 @@
 
 <script>
 import PredatorySeaAnimal from "./PredatorySeaAnimal";
-import SeaAnimal from "./SeaAnimal";
 
 export default {
   name: 'Turtle',
   mixins: [PredatorySeaAnimal],
-  components: {
-    SeaAnimal,
-    PredatorySeaAnimal,
-  },
+  components: {},
   props: {
   },
   data() {
