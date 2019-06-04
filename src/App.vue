@@ -3,42 +3,25 @@
     <img alt="Vue logo" src="./assets/logo.png">
 
     <h3>Choose your destiny</h3>
-    <button @click="setComponent('Converter')">Converter</button>
-    <button @click="setComponent('Turtle')">Turtle</button>
-    <button @click="setComponent('Jellyfish')">Jellyfish</button>
-    <button @click="setComponent('Shark')">Shark</button>
-    <button @click="setComponent('SeaStar')">SeaStar</button>
-
-    <component :is="currentComponent"></component>
+    <router-link to="/converter" tag="button">Converter</router-link>
+    <router-link to="/animals" tag="button">Animals</router-link>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import Converter from './components/Converter.vue'
-import Jellyfish from "./components/Jellyfish";
-import Turtle from "./components/Turtle";
-import Shark from "./components/Shark";
-import SeaStar from "./components/SeaStar";
+import Animals from "./components/Animals";
 
 export default {
   name: 'app',
   components: {
     Converter,
-    Turtle,
-    Jellyfish,
-    Shark,
-    SeaStar,
+    Animals,
   },
   data() {
-    return {
-      currentComponent: '',
-    }
+    return {}
   },
-  methods: {
-    setComponent: function (component) {
-      this.currentComponent = component
-    }
-  }
 }
 </script>
 
